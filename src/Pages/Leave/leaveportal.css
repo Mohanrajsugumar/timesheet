@@ -1,0 +1,80 @@
+.LeavePage{
+    flex: 4;
+    margin-top: 5%;
+    margin-left: 10%;
+}
+
+.LeaveTitle {
+    margin-left: 20%;
+}
+
+.LeavePortalForm {
+    width: 40%;
+    flex-wrap:wrap;
+    display: block;
+    flex-direction:column;
+    margin-left: 10%;
+    outline-width: 0.2rem;
+    outline-style: solid;
+    outline-offset: 10px;
+}
+
+.LeavePortalItem {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    
+    
+}
+.LeavePortalItem>label {
+    margin-bottom: 10px;
+    font-size: 15px;
+    font-weight: 600;
+    color: gray;
+}
+.LeavePortalItem>input {
+    height: 20px;
+    padding: 10px;
+    border: 1px solid gray;
+    border-radius: 5px;
+    width: 50%;
+}
+.LeavePortalGender>input {
+   margin-top: 15px;
+}
+
+.LeavePortalGender>label {
+    margin-top: 10px;
+    color: #555;
+    font-size: 18px;
+
+}
+
+.LeavePortalSelect {
+    height: 40px;
+    border-radius: 5px;
+}
+
+.LeavePortalButton {
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: darkblue;
+    color: white;
+    padding: 7px 10px;
+    font-weight: 600;
+    border-radius: 10px;
+    cursor: pointer;
+    margin-right: 200px;
+    margin-top: 30px;
+
+}
+.LeavePdDrpDown
+{
+    width:250px;
+    padding:2%;
+}
+input>textarea
+{
+    max-width: 100px;
+}
