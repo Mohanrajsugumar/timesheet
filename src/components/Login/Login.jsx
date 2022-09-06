@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-
 import Form from "react-bootstrap/Form";
 
 import Button from "react-bootstrap/Button";
 
 import { useNavigate } from "react-router-dom";
-import { NavLink } from 'react-router-dom' 
+import { NavLink } from 'react-router-dom';
+import ZlendoImages from '../Images/ZlendoLogo.JPG'
+
+
 
 const Login = () => {
   const history = useNavigate();
@@ -127,11 +129,8 @@ const Login = () => {
 
         <div className="right_data mt-5"></div>
 
-        <div className="sign_img mt-5 p-5">
-          <img
-            src="https://png.pngtree.com/png-vector/20220526/ourmid/pngtree-online-registration-or-sign-up-login-for-account-on-smartphone-app-png-image_4740843.png"
-            alt=""
-          />
+        <div className="sign_img mt-5 p-3">
+          <img src={ZlendoImages} alt="Logo"/>
         </div>
       </section>
     </>
