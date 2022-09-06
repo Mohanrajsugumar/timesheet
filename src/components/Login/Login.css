@@ -1,0 +1,21 @@
+.signinPgImg{
+    height:20vw;
+
+}
+.sign_img{
+    margin-top: 0;
+    position: absolute;
+    left: 0;
+    top:0;
+}
+.container{
+background-color: aquamarine;
+width:40vw;
+
+}
+.right_data{
+    background-color: red;
+    position:absolute;
+    right:0;
+    top:0;
+}
