@@ -126,7 +126,7 @@ const Signin = () => {
 
         <div className="left_data mt-3 p-5" style={{ width: "50vw" }}> 
 
-          <h3 className='text-center col-lg-6'>Sign Up</h3> 
+          <h3 className='text-center mt-5 col-lg-6'>Sign Up</h3> 
 
           <Form> 
 
