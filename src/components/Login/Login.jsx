@@ -1,11 +1,13 @@
 import React, { useState } from "react";
-
 import Form from "react-bootstrap/Form";
 
 import Button from "react-bootstrap/Button";
 
 import { useNavigate } from "react-router-dom";
-import { NavLink } from 'react-router-dom' 
+import { NavLink } from 'react-router-dom';
+import ZlendoImages from '../Images/ZlendoLogo.PNG'
+import './Login.css';
+
 
 const Login = () => {
   const history = useNavigate();
@@ -78,10 +80,10 @@ const Login = () => {
 
   return (
     <>
-      <div className="container mt-4 f-4 "></div>
+      {/* <div className="container mt-4 f-4 "></div> */}
 
       <section className="d-flex justify-content-between">
-        <div className="left_data mt-3 " style={{ width: "50vw" }}>
+        <div className="right_data mt-3 " style={{ width: "35vw" }}>
           <h3 className="text-center col-lg-6">Sign In</h3>
 
           <Form>
@@ -122,16 +124,18 @@ const Login = () => {
             <p className="mt-3">
               New user ? <span><NavLink to="/sign">SignUp here</NavLink></span>
             </p>
+           
           </Form>
+          
         </div>
 
+        
+<div className="signinPgImg">
         <div className="right_data mt-5"></div>
 
-        <div className="sign_img mt-5 p-5">
-          <img
-            src="https://png.pngtree.com/png-vector/20220526/ourmid/pngtree-online-registration-or-sign-up-login-for-account-on-smartphone-app-png-image_4740843.png"
-            alt=""
-          />
+        <div className="sign_img">
+          <img src={ZlendoImages} alt="Logo"/>
+        </div>
         </div>
       </section>
     </>
