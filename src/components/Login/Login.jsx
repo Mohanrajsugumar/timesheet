@@ -4,10 +4,9 @@ import Form from "react-bootstrap/Form";
 import Button from "react-bootstrap/Button";
 
 import { useNavigate } from "react-router-dom";
-import { NavLink } from 'react-router-dom';
-import ZlendoImages from '../Images/ZlendoLogo.PNG'
-import './Login.css';
-
+import { NavLink } from "react-router-dom";
+import ZlendoImages from "../Images/ZlendoLogo.PNG";
+import "./Login.css";
 
 const Login = () => {
   const history = useNavigate();
@@ -85,7 +84,7 @@ const Login = () => {
       <section className="d-flex justify-content-between">
         <div className="right_data mt-3 " style={{ width: "35vw" }}>
           <h3 className="text-center col-lg-6">Sign In</h3>
-
+          <h1>Login</h1>
           <Form>
             <Form.Group className="mb-3 col-lg-6" controlId="formBasicEmail">
               <Form.Label>Email address</Form.Label>
@@ -122,20 +121,20 @@ const Login = () => {
             </Button>
 
             <p className="mt-3">
-              New user ? <span><NavLink to="/sign">SignUp here</NavLink></span>
+              New user ?{" "}
+              <span>
+                <NavLink to="/sign">SignUp here</NavLink>
+              </span>
             </p>
-           
           </Form>
-          
         </div>
 
-        
-<div className="signinPgImg">
-        <div className="right_data mt-5"></div>
+        <div className="signinPgImg">
+          <div className="right_data mt-5"></div>
 
-        <div className="sign_img">
-          <img src={ZlendoImages} alt="Logo"/>
-        </div>
+          <div className="sign_img">
+            <img src={ZlendoImages} alt="Logo" />
+          </div>
         </div>
       </section>
     </>
