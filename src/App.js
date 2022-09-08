@@ -11,8 +11,8 @@ import { useState } from 'react';
 import Login from './components/Login/Login'
 import Signin from './components/Signin/Signin'
 import 'bootstrap/dist/css/bootstrap.min.css';
-
-
+import Navbar from './components/Navbar/Navbar'
+import Sidebar from './components/Sidebar/Sidebar'
 
 function App() {
 
@@ -21,8 +21,11 @@ function App() {
   const [total,setTotal]=useState("")
   return (
     <div className="App">
+    
+
+     <Navbar/>
+     <Sidebar/>
      
-      
       <div className="container">
       
         <GlobalProvider value={{login,logout,total}}>

@@ -1,21 +1,103 @@
-.signinPgImg{
-    height:20vw;
+.Container {
+    width: 100vw;
+
+    height: 100vh;
 
 }
-.sign_img{
-    margin-top: 0;
+
+.LeftImage {
+    width: 25vw;
+    height: 20vh;
+
+
+
+}
+
+.LoginDetails {
+
+    width: 25vw;
+
+    height: 50vh;
+
     position: absolute;
-    left: 0;
-    top:0;
-}
-.container{
-background-color: aquamarine;
-width:40vw;
+
+    top: 25%;
+
+    right: 40%;
+
+    border-radius: 20px;
+
+    -webkit-box-shadow: 10px 10px 12px 0px rgba(253, 203, 154, 1);
+
+    -moz-box-shadow: 10px 10px 12px 0px rgba(253, 203, 154, 1);
+
+    box-shadow: 10px 10px 12px 0px rgba(253, 203, 154, 1);
+
+
 
 }
-.right_data{
-    background-color: red;
-    position:absolute;
-    right:0;
-    top:0;
+
+.LoginItems {
+    height: 40vh;
+
+
+}
+
+label {
+    display: block;
+    line-height: 2;
+    text-align: left;
+    margin-left: 8%;
+}
+
+button {
+    display: block;
+    background-color: #fdcb9a;
+    position: relative;
+    top: 10%;
+    left: 35%;
+    padding: 2%;
+    width: 25%;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+
+
+}
+
+button:hover {
+
+    background-color: #e54b26;
+
+    color: white;
+
+}
+
+input {
+
+    width: 20vw;
+
+    padding: 5px;
+
+    border-radius: 5px;
+
+    border-color: rgba(0, 0, 0, 0.2)
+}
+
+h3 {
+
+    color: #e54b26;
+
+}
+
+img {
+
+    width: 25vw;
+
+    height: 20vh;
+
+}
+
+.submitbtn {
+    text-decoration: none;
 }

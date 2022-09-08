@@ -12,7 +12,7 @@ export default function Leaveportal()
 
   return (
     <div className='LeavePage'>
-       <h1 className="LeaveTitle">Leave Details</h1>
+       <p className="LeaveTitle">Leave Form</p>
        <form className="LeavePortalForm">
         <div className="LeavePortalItem">
             <label htmlFor="">Leave Code</label>

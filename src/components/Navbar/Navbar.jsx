@@ -1,30 +1,21 @@
 import React from 'react'
 import "./Navbar.css"
 import {NotificationsNone,Language,Settings } from '@mui/icons-material';
-import { Link } from "react-router-dom";
+import ZlendoImages from '../Images/ZlendoLogo.PNG'
 
 export default function Topbar() {
   return (
     <div className='topbar'>
         <div className='topbarwrapper'>
             <div className='topLeft'>
-               <span className='logo'>Timesheet</span>
-                </div>
-                <div className='topLeft'>
-               <span className='logo'></span>
+               <img src={ZlendoImages} alt="Logo" className='zlendologo'/>
                 </div>
             <div className='topRight'>
-              <div>
-                <Link  to="/"className='login'>Login</Link>
-                <Link to="/sign" className='singin'>Signup</Link>
-              </div>
                 <div className='topbariconContainer'>
                   <NotificationsNone />
-                  <span className='iconBadge'>2</span>
                 </div>
                 <div className='topbariconContainer'>
                   <Language />
-                  <span className='iconBadge'>2</span>
                 </div>
                 <div className='topbariconContainer'>
                   <Settings />

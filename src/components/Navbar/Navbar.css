@@ -1,18 +1,18 @@
+
 .topbar{
     width: 100vw;
     height: 50px;
-    background-color:rgb(233, 249, 244);
-    position: sticky;
+    position: absolute;
     top: 0;
-    z-index: 999;
+    left:0;
 
 }
 .topbarwrapper{
    height: 100%;
-   padding: 0px 20px;
    display: flex;
    align-items: center;
    justify-content: space-between;
+   
 }
 .logo{
     font-weight: bold;
@@ -23,26 +23,20 @@
 .topRight{
     display: flex;
     align-items: center;
+    
 }
 .topbariconContainer{
     position: relative;
     cursor: pointer;
     margin-right: 10px;
-    color: #555;
+    color: #e54b26;
+    padding:10px 10px;
+   
 }
-.iconBadge{
-    position: absolute;
-    width: 15px;
-    height: 15px;
-    top: -5px;
-    right: 0px;
-    background-color: red;
-    color: white;
-    border-radius: 50%;
-    align-items: center;
-    justify-content: center;
-    display: flex;
-    font-size: 10px;
+.topbariconContainer:hover{
+    background-color:rgba(253,203,154,1);
+    color:black;
+    border-radius:50%;
 }
 .topAvatar{
     border-radius: 50%;
@@ -55,4 +49,11 @@
 }
 .singin{
     margin-right:50px;
+}
+.zlendologo{
+    position: relative;
+    top: 0;
+    left:0;
+    width: 15vw;
+    height: 10vh;
 }

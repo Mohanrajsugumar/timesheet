@@ -1,14 +1,17 @@
 .sidebar{
     flex:0.2;
     height: calc(100vh -50px);
-    background-color: rgb(86, 82, 82);
-    position: sticky;
+    background-color:rgba(253,203,154,1);
+    position: absolute;
     top: 50px;
-
+left:0;
+width: 15vw;
 }
 .sidebarWrapper{
-    color: white;
+    color: rgb(255, 255, 255);
     padding: 20px;
+    position: relative;
+    margin-left:5%; 
 }
 .sidebarMenu{
     margin-bottom: 10px;
@@ -28,10 +31,13 @@
     align-items: center;
     border-radius: 10px;
     text-decoration: none;
-    color: white;
+    color: black;
 }
-.sidebarListItem.active, .sidebarListItem:hover{
-    background-color: rgb(67, 69, 70);
+.sidebarListItem:hover{
+    background-color: #e54b26;
+    color: white;
+    transition-property: background-color;
+    transition-duration: 2s;
 }
 .sidebarIcon{
     margin-right: 5px;
@@ -41,7 +47,7 @@
 @media screen and (min-width: 960px) {
     
     .sidebar{
-         width: 30%;
+         width: 15vw;
          height: 100%;
     }
 }
