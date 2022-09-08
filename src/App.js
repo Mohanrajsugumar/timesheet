@@ -9,7 +9,6 @@ import Edituser from './Pages/Edituser/Edituser'
 import Leaveportal from "./Pages/Leave/Leaveportal"
 import { useState } from 'react';
 import Login from './components/Login/Login'
-import Signin from './components/Signin/Signin'
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Navbar from './components/Navbar/Navbar'
 import Sidebar from './components/Sidebar/Sidebar'
@@ -33,7 +32,6 @@ function App() {
         <Route exact path="/home" element={<Home />} />
         <Route exact path="/" element={<Login />} />
         <Route exact path="/login" element={<Login />} />
-        <Route exact path="/sign" element={<Signin />} />
         <Route path="/user" element={<UserList />} />
         <Route path="/time" element={<Timesheet />} />
         <Route path="/editUser" element={<Edituser />} />
