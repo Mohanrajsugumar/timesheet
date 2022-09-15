@@ -8,10 +8,8 @@ export default function UserList() {
   return (
      <div className='user'>
     <div className="userTitleContainer">
-        <h1 className="userTitle">User Information</h1>
-        <Link to="/editUser">
-        <button className="UserAddButton">Edit</button>
-        </Link> 
+        <h3 className="userTitle">User Information</h3>
+      
     </div>
     <div className="userContainer">
         <div className="userShow">
@@ -45,7 +43,9 @@ export default function UserList() {
                 <LocationSearching className='userShowIcon'/>
                 <span className="userShowInfoTitle">India,Chennai</span>
                 </div>
-              
+                <Link to="/editUser" className='editbtntxt'>
+        <button className="UserAddButton">Edit</button>
+        </Link> 
            </div>
                
         </div>

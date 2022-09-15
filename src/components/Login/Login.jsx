@@ -1,5 +1,5 @@
 import React from 'react'
-import ZlendoImages from '../Images/ZlendoLogo.PNG'
+// import ZlendoImages from '../Images/ZlendoLogo.PNG'
 import './Login.css';
 import { Link } from "react-router-dom";
 
@@ -9,7 +9,7 @@ const Login = () => {
 
         <div className='LeftImage'>
 
-            <img src={ZlendoImages} alt="ZlendoLogo" />
+            {/* <img src={ZlendoImages} alt="ZlendoLogo" /> */}
 
             <div className='LoginDetails'>
 

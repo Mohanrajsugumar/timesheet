@@ -1,58 +1,44 @@
-.userlist{
-    flex: 4;
-    background-color: rgb(233, 249, 244);
-    margin-top: 10%;
-    margin-right: 500px;
-    margin-bottom: 200px;
-
+table,th,td
+{
+    border:1px solid black;
+    border-collapse: collapse;
+    padding:5px;
+   
+   
 }
-.userListUser{
-    display: flex;
-    align-items: center;
-}
-.main{
-   flex-direction: column;
-   width: 50%;
-   height: 50%;
-}
-.userListImg{
-    width: 32px;
-    height: 32px;
-    border-radius: 50%;
-    object-fit: cover;
-    margin-right: 10px;
-}
-.userListEdit{
-    border: none;
-    padding: 5px 10px;
+table{
+    position:absolute;
+    top:15%;
+    left:25%;
+    width:50vw;
     border-radius: 10px;
-    background-color: #3bb077;
-    color: white;
-    cursor: pointer;
-    margin-left: 20px;
-    margin-bottom: 200px;
-    width: 10%;
-    height: 10%;
-
-    
+    -webkit-box-shadow: 0px 3px 6px 1px rgba(255,201,154,1);-moz-box-shadow: 0px 3px 6px 1px rgba(255,201,154,1);box-shadow: 0px 3px 6px 1px rgba(255,201,154,1);
 }
-.userListDelete{
-    color: red;
-    cursor: pointer;
+th{
+    background-color:rgba(255,201,154,1); ;
 }
-.userlink{
-    margin-top: 10px;
+.savetime{
+  position: relative;
+  left:15%; 
+  border-radius: 5px;
 }
-.input{
-    width: 100px;
+.subtime{
+    position: relative;
+    right:15%; 
+    border-radius: 5%;
 }
 
-.emp{
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-    font-weight: 600;
-    margin-top: 2%;
-    margin-bottom: 2%;
+.incls {
+    width: 90%;
+   
+}
+.savebut{
+    position: absolute;
+   bottom: 10%;
+   right: 25%;
+   display: flex;
+width: 50%;
+ 
+
 
 }

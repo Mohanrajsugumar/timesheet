@@ -1,11 +1,10 @@
 import React from "react";
 import "./Sidebar.css";
 import {
+    
     LineStyle,
-    AddTask,
     Person,
     PunchClock,
-    Assessment,
     Assignment,
     AssignmentTurnedIn,
   } from "@mui/icons-material";
@@ -13,8 +12,10 @@ import {
   
 
 export default function Sidebar() {
+
   return (
     <div className="sidebar">
+      
     <div className="sidebarWrapper">
     <div className="sidebarMenu">
         <ul className="sidebarList">
@@ -30,12 +31,12 @@ export default function Sidebar() {
               User
             </li>
           </Link>
-          <Link to="/products" className="userlink">
+          {/* <Link to="/products" className="userlink">
             <li className="sidebarListItem">
               <AddTask className="sidebarIcon" />
               Task
             </li>
-          </Link>
+          </Link> */}
           <Link to="/time" className="sidebarListItem">
             <PunchClock className="sidebarIcon" />
             Timesheet
@@ -44,10 +45,10 @@ export default function Sidebar() {
             <Assignment className="sidebarIcon" />
             Projects
           </li>
-          <li className="sidebarListItem">
+          {/* <li className="sidebarListItem">
             <Assessment className="sidebarIcon" />
             Reports
-          </li>
+          </li> */}
           <Link to="/leave"className="sidebarListItem">
             <AssignmentTurnedIn className="sidebarIcon" />
            Apply Leave 
@@ -56,5 +57,6 @@ export default function Sidebar() {
       </div>
     </div>
   </div>
+  
   );
 }

@@ -14,10 +14,10 @@
       padding: 5px;
       width: 80px;
       border: none;
-      background-color: teal;
+      background-color:rgba(255,201,154,1);
+      color: black;
       border-radius: 5px;
       cursor: pointer;
-      color: white;
       font-size: 16px;
   }
   .userContainer{
@@ -29,8 +29,9 @@
   .userShow{
     flex: 1;
     padding: 20px;
-    -webkit-box-shadow: 3px 5px 7px -2px rgba(0,0,0,0.75);
-    box-shadow: 3px 5px 7px -2px rgba(0,0,0,0.75);
+    /* -webkit-box-shadow: 3px 5px 7px -2px rgba(0,0,0,0.75);
+    box-shadow: 3px 5px 7px -2px rgba(0,0,0,0.75); */
+    -webkit-box-shadow: 0px 3px 6px 1px rgba(255,201,154,1);-moz-box-shadow: 0px 3px 6px 1px rgba(255,201,154,1);box-shadow: 0px 3px 6px 1px rgba(255,201,154,1);
     align-items: center;
     justify-content: center;
   }
@@ -132,4 +133,7 @@
       color: white;
       font-weight: 600;
       width: 250px;
+    }
+    .editbtntxt{
+      text-decoration: none;
     }

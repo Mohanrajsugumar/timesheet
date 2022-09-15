@@ -70,7 +70,7 @@
     border-radius: 10px;
     cursor: pointer;
     margin-right: 200px;
-    margin-top: 30px;
+    margin-top: 25px;
     text-align: center;
 
 }
@@ -93,4 +93,5 @@ input>textarea
 }
 select{
     border-radius: 10px;
+
 }
