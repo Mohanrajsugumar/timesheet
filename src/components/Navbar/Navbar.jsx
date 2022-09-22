@@ -1,14 +1,14 @@
 import React from 'react'
 import "./Navbar.css"
 import {NotificationsNone,Language,Settings } from '@mui/icons-material';
-import ZlendoImages from '../Images/ZlendoLogo.PNG'
+// import ZlendoImages from '../Images/ZlendoLogo.PNG'
 
 export default function Topbar() {
   return (
     <div className='topbar'>
         <div className='topbarwrapper'>
             <div className='topLeft'>
-               <img src={ZlendoImages} alt="Logo" className='zlendologo'/>
+               {/* <img src={ZlendoImages} alt="Logo" className='zlendologo'/> */}
                 </div>
             <div className='topRight'>
                 <div className='topbariconContainer'>

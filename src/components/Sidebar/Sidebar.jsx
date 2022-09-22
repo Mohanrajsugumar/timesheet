@@ -1,62 +1,183 @@
-import React from "react";
-import "./Sidebar.css";
-import {
-    
-    LineStyle,
-    Person,
-    PunchClock,
-    Assignment,
-    AssignmentTurnedIn,
-  } from "@mui/icons-material";
-  import { Link } from "react-router-dom";
-  
+import React from 'react'
+import { NavLink } from "react-router-dom";
+import { FaBars, FaHome, FaUser } from "react-icons/fa";
+import { BiAnalyse, BiSearch } from "react-icons/bi";
+import { useState } from "react";
+import { AnimatePresence, motion } from "framer-motion";
+import SidebarMenu from "./SidebarMenu";
+import { TbCalendarTime } from "react-icons/tb";
+import { AiOutlineProject } from "react-icons/ai";
+import { FaPenAlt } from "react-icons/fa";
+// import ZlendoImages from '../Images/ZlendoLogo.PNG'
+import ZlendoImages from '../Images/ZlendoLogo.PNG';
 
-export default function Sidebar() {
+const routes = [
+  
+  
+  {
+    path: "/",
+    name: "Dashboard",
+    icon: <FaHome />,
+  },
+  {
+    path: "/user",
+    name: "User",
+    icon: <FaUser />,
+  },
+  {
+    path: "/time",
+    name: "Timesheet",
+    icon: <TbCalendarTime />,
+  },
+  // {
+  //   path: "/Project",
+  //   name: "Project",
+  //   icon: <AiOutlineProject />,
+  // },
+{
+  path:"/leave",
+  name:"Apply Leave",
+  icon:<FaPenAlt/>,
+},
+  
+];
+
+const Sidebar = ({ children }) => {
+  const [isOpen, setIsOpen] = useState(false);
+  const toggle = () => setIsOpen(!isOpen);
+  const inputAnimation = {
+    hidden: {
+      width: 0,
+      padding: 0,
+      transition: {
+        duration: 0.2,
+      },
+    },
+    show: {
+      width: "140px",
+      padding: "5px 15px",
+      transition: {
+        duration: 0.2,
+      },
+    },
+  };
+
+  const showAnimation = {
+    hidden: {
+      width: 0,
+      opacity: 0,
+      transition: {
+        duration: 0.5,
+      },
+    },
+    show: {
+      opacity: 1,
+      width: "auto",
+      transition: {
+        duration: 0.5,
+      },
+    },
+  };
 
   return (
-    <div className="sidebar">
-      
-    <div className="sidebarWrapper">
-    <div className="sidebarMenu">
-        <ul className="sidebarList">
-        <Link to="/" className="userlink">
-            <li className="sidebarListItem active">
-              <LineStyle className="sidebarIcon" />
-              Home
-            </li>
-          </Link>
-          <Link to="/user" className="userlink">
-            <li className="sidebarListItem active">
-              <Person className="sidebarIcon" />
-              User
-            </li>
-          </Link>
-          {/* <Link to="/products" className="userlink">
-            <li className="sidebarListItem">
-              <AddTask className="sidebarIcon" />
-              Task
-            </li>
-          </Link> */}
-          <Link to="/time" className="sidebarListItem">
-            <PunchClock className="sidebarIcon" />
-            Timesheet
-          </Link>
-          <li className="sidebarListItem">
-            <Assignment className="sidebarIcon" />
-            Projects
-          </li>
-          {/* <li className="sidebarListItem">
-            <Assessment className="sidebarIcon" />
-            Reports
-          </li> */}
-          <Link to="/leave"className="sidebarListItem">
-            <AssignmentTurnedIn className="sidebarIcon" />
-           Apply Leave 
-          </Link>
-        </ul>
+    <>
+      <div className="main-container">
+        <div className="Zlendo-Logo">
+        <img src={ZlendoImages} alt="Logo" className="zlendologo"/>
+        </div>
+        <motion.div
+          animate={{
+            width: isOpen ? "200px" : "45px",
+
+            transition: {
+              duration: 0.5,
+              type: "spring",
+              damping: 10,
+            },
+          }}
+          className={`sidebar `}
+        >
+          
+          <div className="top_section">
+            <AnimatePresence>
+              {isOpen && (
+                <motion.h1
+                  variants={showAnimation}
+                  initial="hidden"
+                  animate="show"
+                  exit="hidden"
+                  className="logo"
+                >
+                  {/* DoSomeCoding */}
+                </motion.h1>
+              )}
+            </AnimatePresence>
+
+            <div className="bars">
+              <FaBars onClick={toggle} />
+            </div>
+          </div>
+          {/* <div className="search">
+            <div className="search_icon">
+              <BiSearch />
+            </div>
+            <AnimatePresence>
+              {isOpen && (
+                <motion.input
+                  initial="hidden"
+                  animate="show"
+                  exit="hidden"
+                  variants={inputAnimation}
+                  type="text"
+                  placeholder="Search"
+                />
+              )}
+            </AnimatePresence>
+          </div> */}
+          <section className="routes">
+            {routes.map((route, index) => {
+              if (route.subRoutes) {
+                return (
+                  <SidebarMenu
+                    setIsOpen={setIsOpen}
+                    route={route}
+                    showAnimation={showAnimation}
+                    isOpen={isOpen}
+                  />
+                );
+              }
+
+              return (
+                <NavLink
+                  to={route.path}
+                  key={index}
+                  className="link"
+                  activeClassName="active"
+                >
+                  <div className="icon">{route.icon}</div>
+                  <AnimatePresence>
+                    {isOpen && (
+                      <motion.div
+                        variants={showAnimation}
+                        initial="hidden"
+                        animate="show"
+                        exit="hidden"
+                        className="link_text"
+                      >
+                        {route.name}
+                      </motion.div>
+                    )}
+                  </AnimatePresence>
+                </NavLink>
+              );
+            })}
+          </section>
+        </motion.div>
+
+        <main>{children}</main>
       </div>
-    </div>
-  </div>
-  
+    </>
   );
-}
+};
+
+export default Sidebar;

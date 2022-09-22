@@ -2,7 +2,8 @@ import React from 'react'
 import "./leaveportal.css"
 
 
-export default function Leaveportal() 
+function Leaveportal() 
+
 {
 
  /*function show_alert() {
@@ -55,3 +56,4 @@ export default function Leaveportal()
     </div>
   )
 }
+export default Leaveportal;
